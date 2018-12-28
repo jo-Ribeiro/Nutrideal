@@ -42,6 +42,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.cbAtividade = new System.Windows.Forms.ComboBox();
             this.rbFem2 = new System.Windows.Forms.RadioButton();
             this.rbMasc2 = new System.Windows.Forms.RadioButton();
             this.tbAltura2 = new System.Windows.Forms.TextBox();
@@ -51,8 +52,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button4 = new System.Windows.Forms.Button();
-            this.cbAtividade = new System.Windows.Forms.ComboBox();
             this.tabMenu.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -209,6 +208,15 @@
             this.tabPage2.Text = "Calculo de Peso Ideal";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // cbAtividade
+            // 
+            this.cbAtividade.FormattingEnabled = true;
+            this.cbAtividade.Location = new System.Drawing.Point(69, 140);
+            this.cbAtividade.Name = "cbAtividade";
+            this.cbAtividade.Size = new System.Drawing.Size(201, 21);
+            this.cbAtividade.TabIndex = 9;
+            this.cbAtividade.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // rbFem2
             // 
             this.rbFem2.AutoSize = true;
@@ -292,30 +300,11 @@
             this.tabPage3.Text = "Gestor de Informação Calórica";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(413, 328);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(174, 58);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Gestor de Informação Calórica";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // cbAtividade
-            // 
-            this.cbAtividade.FormattingEnabled = true;
-            this.cbAtividade.Location = new System.Drawing.Point(69, 140);
-            this.cbAtividade.Name = "cbAtividade";
-            this.cbAtividade.Size = new System.Drawing.Size(201, 21);
-            this.cbAtividade.TabIndex = 9;
-            this.cbAtividade.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.tabMenu);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
@@ -337,7 +326,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button calcPeso;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
