@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace eNutrideal
 {
@@ -77,8 +79,43 @@ namespace eNutrideal
 
         private void button1_Click(object sender, EventArgs e)
         {
+            OpenFileDialog o = new OpenFileDialog();
+            DialogResult result = o.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                string path = o.InitialDirectory + o.FileName;
+
+            }
+            try
+            {
+                string ficheiro = File.ReadAllText(o.FileName);
+                LerFicheiro.LerFicheiroTxt(ficheiro);
+
+                try
+                {
+                    XmlReader xmlFile;
+                    xmlFile = XmlReader.Create(".xml", new XmlReaderSettings());
+                    DataSet ds = new DataSet();
+                    ds.ReadXml(xmlFile);
+                    //dataGridView1.DataSource = ds.Tables[0];
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+                MessageBox.Show("Ficheiro importado com sucesso");
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Por favor escolha um ficheiro valido!");
+            }
 
         }
+    
 
         private void button3_Click(object sender, EventArgs e)
         {
