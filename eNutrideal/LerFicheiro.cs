@@ -45,11 +45,12 @@ namespace eNutrideal
 
 
                     ////chamada do Metodo AddDonator a cada iteração que ira introduzir um Elemento Donator na DonatorsList
-                    //root.AppendChild(AdicionarRefeicao.NovoDoador(campo[0], campo[1], campo[2], campo[3], campo[4], campo[5], campo[6],
-                    //    campo[7], campo[8], campo[9], campo[10], campo[11], campo[12], campo[13], campo[14], campo[15],
-                    //    campo[16], campo[17], campo[18], campo[19], campo[20], campo[21], campo[22], campo[23], doc));
+                    ///
+                    root.AppendChild(AdicionarRefeicao.NovoRefeicao(campo[0], campo[1], campo[2], campo[3], campo[4], campo[5], campo[6],
+                      campo[7], campo[8], campo[9], campo[10], campo[11], campo[12], campo[13], campo[14], campo[15],
+                       campo[16], campo[17], campo[18], campo[19], campo[20], campo[21], campo[22], campo[23], doc));
 
-                    doc.Save(@"Doadores.xml");
+                    doc.Save(@"ListaRefeicao.xml");
 
 
                 }
