@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -63,13 +64,13 @@ namespace eNutrideal
 
             {
                 double TMB = (10 * peso) + (6.25 * altura) - (5 * idade) + 5;
-               // MessageBox.Show("Taxa Metabólica Basal" + TMB.ToString());
+                // MessageBox.Show("Taxa Metabólica Basal" + TMB.ToString());
                 Atividade(TMB);
             }
             else if (rbFem1.Checked)
             {
                 double TMB = ((10 * peso) + (6.25 * altura) - (5 * idade)) - 161;
-               // MessageBox.Show("Taxa Metabólica Basal" + TMB.ToString());
+                // MessageBox.Show("Taxa Metabólica Basal" + TMB.ToString());
                 Atividade(TMB);
             }
             else
@@ -86,8 +87,48 @@ namespace eNutrideal
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //codigo
+            OpenFileDialog o = new OpenFileDialog();
+            o.Filter = "txt ou JSON|*.txt;*.json";
+            DialogResult result = o.ShowDialog();
+            String pathFile = o.InitialDirectory + o.FileName; //digo que ficheiro abro e a diretoria
+            String extensao = Path.GetExtension(pathFile).ToString();
+
+            if (extensao == "txt")
+            {
+                //chamar metodo para ler texto
+                string ficheiro = File.ReadAllText(o.FileName);
+                LerFicheiro.LerFicheiroTxt(ficheiro);
+
+            }
+            else if (extensao == "json")
+            {
+                //chamar metodo para ler JSON
+                using (StreamReader r = new StreamReader(pathFile))
+                {
+                    string jsonRefeicoes = r.ReadToEnd();
+                    Console.WriteLine();
+                    Console.ReadLine();
+
+                    List<AdicionarRefeicao> Refeicoes = JsonConvert.DeserializeObject<List<AdicionarRefeicao>>(jsonRefeicoes);
+
+                    foreach (AdicionarRefeicao refeicao in Refeicoes)
+                    {
+                        Console.WriteLine(refeicao);
+                        MessageBox.Show("Ficheiro importado com sucesso");
+                    }
+                    Console.ReadLine();
+                }
+            }
+            else
+            {
+
+                MessageBox.Show("Por favor escolha um ficheiro valido!");
+            }
+
+
+
         }
+    
     
 
         private void button3_Click(object sender, EventArgs e)
