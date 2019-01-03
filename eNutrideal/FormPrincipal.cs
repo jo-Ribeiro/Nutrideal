@@ -79,9 +79,14 @@ namespace eNutrideal
 
         }
 
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            //codigo ler ficheiro
+            //codigo
         }
     
 
@@ -163,6 +168,11 @@ namespace eNutrideal
 
 
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
           
