@@ -42,7 +42,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.cbAtividade = new System.Windows.Forms.ComboBox();
             this.rbFem2 = new System.Windows.Forms.RadioButton();
             this.rbMasc2 = new System.Windows.Forms.RadioButton();
             this.tbAltura2 = new System.Windows.Forms.TextBox();
@@ -52,6 +51,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.cbAtividade = new System.Windows.Forms.ComboBox();
             this.tabMenu.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -90,6 +90,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.cbAtividade);
             this.tabPage1.Controls.Add(this.rbFem1);
             this.tabPage1.Controls.Add(this.rbMasc1);
             this.tabPage1.Controls.Add(this.tbPeso1);
@@ -133,21 +134,21 @@
             // 
             // tbPeso1
             // 
-            this.tbPeso1.Location = new System.Drawing.Point(101, 161);
+            this.tbPeso1.Location = new System.Drawing.Point(128, 138);
             this.tbPeso1.Name = "tbPeso1";
             this.tbPeso1.Size = new System.Drawing.Size(99, 20);
             this.tbPeso1.TabIndex = 14;
             // 
             // tbAltura1
             // 
-            this.tbAltura1.Location = new System.Drawing.Point(100, 126);
+            this.tbAltura1.Location = new System.Drawing.Point(127, 103);
             this.tbAltura1.Name = "tbAltura1";
             this.tbAltura1.Size = new System.Drawing.Size(100, 20);
             this.tbAltura1.TabIndex = 13;
             // 
             // tbIdade1
             // 
-            this.tbIdade1.Location = new System.Drawing.Point(100, 94);
+            this.tbIdade1.Location = new System.Drawing.Point(127, 71);
             this.tbIdade1.Name = "tbIdade1";
             this.tbIdade1.Size = new System.Drawing.Size(100, 20);
             this.tbIdade1.TabIndex = 12;
@@ -156,7 +157,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(63, 161);
+            this.label6.Location = new System.Drawing.Point(68, 138);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(31, 13);
             this.label6.TabIndex = 11;
@@ -165,7 +166,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(63, 129);
+            this.label5.Location = new System.Drawing.Point(68, 106);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(34, 13);
             this.label5.TabIndex = 10;
@@ -174,7 +175,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(63, 94);
+            this.label4.Location = new System.Drawing.Point(68, 71);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(34, 13);
             this.label4.TabIndex = 9;
@@ -191,7 +192,6 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.cbAtividade);
             this.tabPage2.Controls.Add(this.rbFem2);
             this.tabPage2.Controls.Add(this.rbMasc2);
             this.tabPage2.Controls.Add(this.tbAltura2);
@@ -207,15 +207,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Calculo de Peso Ideal";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // cbAtividade
-            // 
-            this.cbAtividade.FormattingEnabled = true;
-            this.cbAtividade.Location = new System.Drawing.Point(69, 140);
-            this.cbAtividade.Name = "cbAtividade";
-            this.cbAtividade.Size = new System.Drawing.Size(201, 21);
-            this.cbAtividade.TabIndex = 9;
-            this.cbAtividade.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // rbFem2
             // 
@@ -300,14 +291,23 @@
             this.tabPage3.Text = "Gestor de Informação Calórica";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // cbAtividade
+            // 
+            this.cbAtividade.FormattingEnabled = true;
+            this.cbAtividade.Location = new System.Drawing.Point(71, 183);
+            this.cbAtividade.Name = "cbAtividade";
+            this.cbAtividade.Size = new System.Drawing.Size(201, 21);
+            this.cbAtividade.TabIndex = 17;
+            this.cbAtividade.Text = "Nível de Atividade Fisica";
+            // 
+            // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabMenu);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Name = "FormPrincipal";
             this.Text = "Pagina Principal";
             this.tabMenu.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

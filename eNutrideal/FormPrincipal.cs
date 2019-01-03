@@ -17,6 +17,13 @@ namespace eNutrideal
         public FormPrincipal()
         {
             InitializeComponent();
+
+            cbAtividade.Items.Add("Taxa Metabólica Basal");
+            cbAtividade.Items.Add("Sedentário - Pouco ou Nenhum Exercicio");
+            cbAtividade.Items.Add("Ligeiramente Ativo - Atividade Fisica 1 a 3 vezes por Semana");
+            cbAtividade.Items.Add("Moderadamente Ativo - Atividade Fisica 3 a 5 vezes por Semana");
+            cbAtividade.Items.Add("Ativo - Atividade Fisica 6 a 7 vezes por Semana");
+            cbAtividade.Items.Add("Extremamente Ativo - Atividade Fisica Muito Dificl ou Trabalho Fisico");
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -56,13 +63,13 @@ namespace eNutrideal
 
             {
                 double TMB = (10 * peso) + (6.25 * altura) - (5 * idade) + 5;
-                MessageBox.Show("Taxa Metabólica Basal" + TMB.ToString());
+               // MessageBox.Show("Taxa Metabólica Basal" + TMB.ToString());
                 Atividade(TMB);
             }
             else if (rbFem1.Checked)
             {
                 double TMB = ((10 * peso) + (6.25 * altura) - (5 * idade)) - 161;
-                MessageBox.Show("Taxa Metabólica Basal" + TMB.ToString());
+               // MessageBox.Show("Taxa Metabólica Basal" + TMB.ToString());
                 Atividade(TMB);
             }
             else
@@ -105,7 +112,7 @@ namespace eNutrideal
                 {
                     MessageBox.Show(ex.ToString());
                 }
-                MessageBox.Show("Ficheiro importado com sucesso");
+                
 
             }
             catch (Exception)
@@ -113,7 +120,7 @@ namespace eNutrideal
 
                 MessageBox.Show("Por favor escolha um ficheiro valido!");
             }
-
+            MessageBox.Show("Ficheiro importado com sucesso");
         }
     
 
@@ -199,29 +206,55 @@ namespace eNutrideal
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cbAtividade.Items.Add("Taxa Metabólica Basal");
-            cbAtividade.Items.Add("Sedentário - Pouco ou Nenhum Exercicio");
-            cbAtividade.Items.Add("Ligeiramente Ativo - Atividade Fisica 1 a 3 vezes por Semana");
-            cbAtividade.Items.Add("Moderadamente Ativo - Atividade Fisica 3 a 5 vezes por Semana");
-            cbAtividade.Items.Add("Ativo - Atividade Fisica 6 a 7 vezes por Semana");
-            cbAtividade.Items.Add("Extremamente Ativo - Atividade Fisica Muito Dificl ou Trabalho Fisico");
+
         }
 
-        public enum Atividades { TMB, PA, LA, MA, A, EA}
-        public void Atividade(object TMB)
+          
+        public void Atividade(double TMB)
         {
-
-            Atividades a = (Atividades)(new Random()).Next(0, 6);
-
-            switch (a)
+          
+            switch (cbAtividade.SelectedIndex)
             {
-                    case Atividades.TMB:
+                    case 0:
 
-                    MessageBox.Show(" Taxa Metabólica Basal: " + TMB);
+                    MessageBox.Show(" Taxa Metabólica Basal:\n " + TMB + "Calorias");
                     break;
 
-                case Atividades.PA:
-                    MessageBox.Show("Sedentário - Pouco ou Nenhum Exercicio");
+                    case 1:
+
+                    double PA = TMB * 1.2;
+                    MessageBox.Show("Estilo de Vida:\n Sedentário - Pouco ou Nenhum Exercicio:\n " + PA + "Calorias");
+                    break;
+
+                    case 2:
+
+                    double LA = TMB * 1.375;
+                    MessageBox.Show("Estilo de Vida:\n Ligeiramente Ativo - Atividade Fisica 1 a 3 vezes por Semana:\n " + LA + "Calorias");
+                    break;
+
+                    case 3:
+
+                    double MA = TMB * 1.550;
+                    MessageBox.Show("Estilo de Vida:\n Moderadamente Ativo - Atividade Fisica 3 a 5 vezes por Semana:\n " + MA + "Calorias");
+                    break;
+
+                    case 4:
+
+                    double A = TMB * 1.725;
+                    MessageBox.Show("Estilo de Vida:\n Ativo - Atividade Fisica 6 a 7 vezes por Semana:\n " + A + "Calorias");
+                    break;
+
+                    case 5:
+
+                    double EA = TMB * 1.9;
+                    MessageBox.Show("Estilo de Vida:\n Extremamente Ativo - Atividade Fisica Muito Dificl ou Trabalho Fisico:\n " + EA + "Calorias");
+                    break;
+
+                    default:
+                    MessageBox.Show("Selecione o seu estilo de vida!!");
+                    break;
+                    
+
 
             }
 
