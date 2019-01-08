@@ -93,14 +93,14 @@ namespace eNutrideal
             String pathFile = o.InitialDirectory + o.FileName; //digo que ficheiro abro e a diretoria
             String extensao = Path.GetExtension(pathFile).ToString();
 
-            if (extensao == "txt")
+            if (extensao == ".txt")
             {
                 //chamar metodo para ler texto
                 string ficheiro = File.ReadAllText(o.FileName);
                 LerFicheiro.LerFicheiroTxt(ficheiro);
 
             }
-            else if (extensao == "json")
+            else if (extensao == ".json")
             {
                 //chamar metodo para ler JSON
                 using (StreamReader r = new StreamReader(pathFile))
@@ -230,31 +230,107 @@ namespace eNutrideal
                     case 1:
 
                     double PA = TMB * 1.2;
-                    MessageBox.Show("Estilo de Vida:\n Sedentário - Pouco ou Nenhum Exercicio:\n " + PA + "Calorias");
+                    //perca de 0.25kg/semana - Mild weight loss (MWL)
+                    double MWLPA = PA - 250;
+                    //perca de 0.50kg/semana - Weight loss (WL)
+                    double WLPA = PA - 500;
+                    //perca de 1kg/semana - Extreme weight loss (EWL)
+                    double EWLPA = PA - 1000;
+                    //ganhar de 0.25kg/semana - Mild weight gain (MWG)
+                    double MWGPA = PA + 250;
+                    //ganhar de 0.50kg/semana - Weight gain (WG)
+                    double WGPA = PA + 500;
+                    //ganhar de 1kg/semana - Extreme weight gain (EWG)
+                    double EWGPA = PA + 1000;
+                    MessageBox.Show("Estilo de Vida:\n Sedentário - Pouco ou Nenhum Exercicio:\n " + PA + "Calorias\n"+
+                        "\tPara uma perca de:\n 0,25 kg por semana: "+MWLPA + "Calorias\n 0,5 kg por semana: " + WLPA +
+                        "Calorias\n 1,0 kg por semana: " + EWLPA + "Calorias \n \t Para um ganho de: \n 0,25 kg por semana" + MWGPA
+                        + "Calorias\n 0,5 kg por semana: " + WGPA + "Calorias\n 1,0 kg por semana: " + EWGPA + "Calorias");
                     break;
 
                     case 2:
 
                     double LA = TMB * 1.375;
-                    MessageBox.Show("Estilo de Vida:\n Ligeiramente Ativo - Atividade Fisica 1 a 3 vezes por Semana:\n " + LA + "Calorias");
+                    //perca de 0.25kg/semana - Mild weight loss (MWL)
+                    double MWLLA = LA - 250;
+                    //perca de 0.50kg/semana - Weight loss (WL)
+                    double WLLA = LA - 500;
+                    //perca de 1kg/semana - Extreme weight loss (EWL)
+                    double EWLLA = LA - 1000;
+                    //ganhar de 0.25kg/semana - Mild weight gain (MWG)
+                    double MWGLA = LA + 250;
+                    //ganhar de 0.50kg/semana - Weight gain (WG)
+                    double WGLA = LA + 500;
+                    //ganhar de 1kg/semana - Extreme weight gain (EWG)
+                    double EWGLA = LA + 1000;
+
+                    MessageBox.Show("Estilo de Vida:\n Ligeiramente Ativo - Atividade Fisica 1 a 3 vezes por Semana:\n " + LA + "Calorias\n" +
+                        "\tPara uma perca de:\n 0,25 kg por semana: " + MWLLA + "Calorias\n 0,5 kg por semana: " + WLLA +
+                        "Calorias\n 1,0 kg por semana: " + EWLLA + "Calorias \n \t Para um ganho de: \n 0,25 kg por semana" + MWGLA
+                        + "Calorias\n 0,5 kg por semana: " + WGLA + "Calorias\n 1,0 kg por semana: " + EWGLA + "Calorias"); 
                     break;
 
                     case 3:
 
                     double MA = TMB * 1.550;
-                    MessageBox.Show("Estilo de Vida:\n Moderadamente Ativo - Atividade Fisica 3 a 5 vezes por Semana:\n " + MA + "Calorias");
+                    //perca de 0.25kg/semana - Mild weight loss (MWL)
+                    double MWLMA = MA - 250;
+                    //perca de 0.50kg/semana - Weight loss (WL)
+                    double WLMA = MA - 500;
+                    //perca de 1kg/semana - Extreme weight loss (EWL)
+                    double EWLMA = MA - 1000;
+                    //ganhar de 0.25kg/semana - Mild weight gain (MWG)
+                    double MWGMA = MA + 250;
+                    //ganhar de 0.50kg/semana - Weight gain (WG)
+                    double WGMA = MA + 500;
+                    //ganhar de 1kg/semana - Extreme weight gain (EWG)
+                    double EWGMA = MA + 1000;
+                    MessageBox.Show("Estilo de Vida:\n Moderadamente Ativo - Atividade Fisica 3 a 5 vezes por Semana:\n " + MA + "Calorias\n" +
+                        "\tPara uma perca de:\n 0,25 kg por semana: " + MWLMA + "Calorias\n 0,5 kg por semana: " + WLMA +
+                        "Calorias\n 1,0 kg por semana: " + EWLMA + "Calorias \n \t Para um ganho de: \n 0,25 kg por semana" + MWGMA
+                        + "Calorias\n 0,5 kg por semana: " + WGMA + "Calorias\n 1,0 kg por semana: " + EWGMA + "Calorias");
                     break;
 
                     case 4:
 
                     double A = TMB * 1.725;
-                    MessageBox.Show("Estilo de Vida:\n Ativo - Atividade Fisica 6 a 7 vezes por Semana:\n " + A + "Calorias");
+                    //perca de 0.25kg/semana - Mild weight loss (MWL)
+                    double MWLA = A - 250;
+                    //perca de 0.50kg/semana - Weight loss (WL)
+                    double WLA = A - 500;
+                    //perca de 1kg/semana - Extreme weight loss (EWL)
+                    double EWLA = A - 1000;
+                    //ganhar de 0.25kg/semana - Mild weight gain (MWG)
+                    double MWGA = A + 250;
+                    //ganhar de 0.50kg/semana - Weight gain (WG)
+                    double WGA = A + 500;
+                    //ganhar de 1kg/semana - Extreme weight gain (EWG)
+                    double EWGA = A + 1000;
+                    MessageBox.Show("Estilo de Vida:\n Ativo - Atividade Fisica 6 a 7 vezes por Semana:\n " + A + "Calorias\n" +
+                        "\tPara uma perca de:\n 0,25 kg por semana: " + MWLA + "Calorias\n 0,5 kg por semana: " + WLA +
+                        "Calorias\n 1,0 kg por semana: " + EWLA + "Calorias \n \t Para um ganho de: \n 0,25 kg por semana" + MWGA
+                        + "Calorias\n 0,5 kg por semana: " + WGA + "Calorias\n 1,0 kg por semana: " + EWGA + "Calorias");
                     break;
 
                     case 5:
 
                     double EA = TMB * 1.9;
-                    MessageBox.Show("Estilo de Vida:\n Extremamente Ativo - Atividade Fisica Muito Dificl ou Trabalho Fisico:\n " + EA + "Calorias");
+                    //perca de 0.25kg/semana - Mild weight loss (MWL)
+                    double MWLEA = EA - 250;
+                    //perca de 0.50kg/semana - Weight loss (WL)
+                    double WLEA = EA - 500;
+                    //perca de 1kg/semana - Extreme weight loss (EWL)
+                    double EWLEA = EA - 1000;
+                    //ganhar de 0.25kg/semana - Mild weight gain (MWG)
+                    double MWGEA = EA + 250;
+                    //ganhar de 0.50kg/semana - Weight gain (WG)
+                    double WGEA = EA + 500;
+                    //ganhar de 1kg/semana - Extreme weight gain (EWG)
+                    double EWGEA = EA + 1000;
+                    MessageBox.Show("Estilo de Vida:\n Extremamente Ativo - Atividade Fisica Muito Dificl ou Trabalho Fisico:\n " + EA + "Calorias\n" +
+                        "\tPara uma perca de:\n 0,25 kg por semana: " + MWLEA + "Calorias\n 0,5 kg por semana: " + WLEA +
+                        "Calorias\n 1,0 kg por semana: " + EWLEA + "Calorias \n \t Para um ganho de: \n 0,25 kg por semana" + MWGEA
+                        + "Calorias\n 0,5 kg por semana: " + WGEA + "Calorias\n 1,0 kg por semana: " + EWGEA + "Calorias");
                     break;
 
                     default:
