@@ -43,3 +43,11 @@ C:\Users\joana\Source\Repos\jo-Ribeiro\Nutrideal\eNutrideal\bin\Debug\Newtonsoft
 C:\Users\joana\Source\Repos\jo-Ribeiro\Nutrideal\eNutrideal\bin\Debug\Newtonsoft.Json.pdb
 C:\Users\joana\Source\Repos\jo-Ribeiro\Nutrideal\eNutrideal\bin\Debug\Newtonsoft.Json.xml
 C:\Users\joana\Source\Repos\jo-Ribeiro\Nutrideal\eNutrideal\obj\Debug\eNutrideal.csproj.CopyComplete
+C:\Users\clauc\source\repos\jo-Ribeiro\Nutrideal\eNutrideal\obj\Debug\eNutrideal.csprojAssemblyReference.cache
+C:\Users\clauc\source\repos\jo-Ribeiro\Nutrideal\eNutrideal\obj\Debug\eNutrideal.FormAdiconarRefeicao.resources
+C:\Users\clauc\source\repos\jo-Ribeiro\Nutrideal\eNutrideal\obj\Debug\eNutrideal.FormPrincipal.resources
+C:\Users\clauc\source\repos\jo-Ribeiro\Nutrideal\eNutrideal\obj\Debug\eNutrideal.Properties.Resources.resources
+C:\Users\clauc\source\repos\jo-Ribeiro\Nutrideal\eNutrideal\obj\Debug\eNutrideal.csproj.GenerateResource.cache
+C:\Users\clauc\source\repos\jo-Ribeiro\Nutrideal\eNutrideal\obj\Debug\eNutrideal.csproj.CoreCompileInputs.cache
+C:\Users\clauc\source\repos\jo-Ribeiro\Nutrideal\eNutrideal\obj\Debug\eNutrideal.exe
+C:\Users\clauc\source\repos\jo-Ribeiro\Nutrideal\eNutrideal\obj\Debug\eNutrideal.pdb

@@ -34,7 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtNomeRestaurante = new System.Windows.Forms.TextBox();
+            this.txtNomeRefeicao = new System.Windows.Forms.TextBox();
             this.txtItem = new System.Windows.Forms.TextBox();
             this.txtQuantidade_Dose = new System.Windows.Forms.TextBox();
             this.txtCalorias = new System.Windows.Forms.TextBox();
@@ -58,15 +58,16 @@
             this.btnAdicionar.TabIndex = 1;
             this.btnAdicionar.Text = "Adicionar";
             this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(37, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 13);
+            this.label1.Size = new System.Drawing.Size(81, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Nome Restaurante";
+            this.label1.Text = "Nome Refeicao";
             // 
             // label2
             // 
@@ -95,12 +96,12 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Calorias";
             // 
-            // txtNomeRestaurante
+            // txtNomeRefeicao
             // 
-            this.txtNomeRestaurante.Location = new System.Drawing.Point(167, 39);
-            this.txtNomeRestaurante.Name = "txtNomeRestaurante";
-            this.txtNomeRestaurante.Size = new System.Drawing.Size(144, 20);
-            this.txtNomeRestaurante.TabIndex = 6;
+            this.txtNomeRefeicao.Location = new System.Drawing.Point(167, 39);
+            this.txtNomeRefeicao.Name = "txtNomeRefeicao";
+            this.txtNomeRefeicao.Size = new System.Drawing.Size(144, 20);
+            this.txtNomeRefeicao.TabIndex = 6;
             // 
             // txtItem
             // 
@@ -131,7 +132,7 @@
             this.Controls.Add(this.txtCalorias);
             this.Controls.Add(this.txtQuantidade_Dose);
             this.Controls.Add(this.txtItem);
-            this.Controls.Add(this.txtNomeRestaurante);
+            this.Controls.Add(this.txtNomeRefeicao);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -154,7 +155,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtNomeRestaurante;
+        private System.Windows.Forms.TextBox txtNomeRefeicao;
         private System.Windows.Forms.TextBox txtItem;
         private System.Windows.Forms.TextBox txtQuantidade_Dose;
         private System.Windows.Forms.TextBox txtCalorias;

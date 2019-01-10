@@ -36,19 +36,16 @@ namespace eNutrideal
 
                 campo = linhas[a].Split('|'); //dividir pessoa por pipe
 
-                for (int b = 0; b < campo.Length; b++) //remove os espaços e o caracter especial no 1
+                for (int b = 0; b < campo.Length; b++) //remove os espaços e o caracter especial 
                 {
 
                     campo[b] = campo[b].Replace(@"\s+", ""); // remove os espaços
-                    campo[0] = campo[0].Replace(@"§", ""); //remove caracter especial que apenas aparece no primeiro elemento
-                    campo[19] = campo[19].Replace('.', ',');
+                    campo[0] = campo[0].Replace(@"§", ""); //remove carateres especial 
+                    campo[4] = campo[4].Replace('.', ',');
 
 
-                    ////chamada do Metodo AddDonator a cada iteração que ira introduzir um Elemento Donator na DonatorsList
-                    ///
-                    //root.AppendChild(AdicionarRefeicao.NovoRefeicao(campo[0], campo[1], campo[2], campo[3], campo[4], campo[5], campo[6],
-                    //  campo[7], campo[8], campo[9], campo[10], campo[11], campo[12], campo[13], campo[14], campo[15],
-                    //   campo[16], campo[17], campo[18], campo[19], campo[20], campo[21], campo[22], campo[23], doc));
+                   
+                    root.AppendChild(AdicionarRefeicao.NovaRefeicao(campo[0], campo[1], campo[2], campo[3], doc));
 
                     doc.Save(@"ListaRefeicao.xml");
 
